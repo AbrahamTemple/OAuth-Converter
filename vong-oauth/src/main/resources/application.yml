@@ -1,0 +1,41 @@
+server:
+  port: 8077
+
+spring:
+  application:
+    name: vong-oauth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${vong.naocs.ip}:${vong.nacos.port}
+  datasource:
+    username: ${vong.datasource.username}
+    password: ${vong.datasource.password}
+    url: jdbc:mysql://${vong.datasource.ip}:${vong.datasource.port}/spare?serverTimezone=GMT&amp&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource #更改数据库的数据源为druid
+    # druid继承的默认属性
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMinllis: 60000
+    minEvictableIdleTimeMills: 300000
+    # validationQuery: SELECT 1 FROM ...
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    # druid自己的支持第三方插件与监控配置
+    filters: start,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #配置日志
+  global-config:
+    db-config:
+      logic-delete-value: 1 #删除了逻辑删除字段更新为1
+      logic-not-delete-value: 0 #对应逻辑删除字段默认为0

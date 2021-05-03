@@ -1,0 +1,10 @@
+#security:
+#  oauth2:
+#    client:
+#      client-id: clients
+#      client-secret: secrets
+#      scope: app
+#      access-token-uri: http://localhost:8077/oauth/token
+#      user-authorization-uri: http://localhost:8077/oauth/authorize
+#    resource:
+#      token-info-uri: http://localhost:8077/oauth/check_token
