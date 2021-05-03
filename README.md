@@ -110,7 +110,7 @@ public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
 }
 ```
 
-获取方法
+获取client信息的方法
 
 ``` java
 SecurityContextHolder.getContext().getAuthentication().getPrincipal()
