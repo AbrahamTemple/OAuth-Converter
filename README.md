@@ -27,7 +27,7 @@ token的内部是不是还潜藏着我们需要的信息？
 - DefaultAccessTokenConverter
 
 ``` java
-/ **
+ /**
   * 转换器中代表用户的令牌中的部分数据。
   *
   * @param userTokenConverter要设置的userTokenConverter
@@ -40,7 +40,7 @@ token的内部是不是还潜藏着我们需要的信息？
 - DefaultUserAuthenticationConverter
 
 ``` java
-/ **
+ /**
   * 从传入映射中提取{@link Authentication}时使用的可选{@link UserDetailsService}。
   *
   * @param userDetailsService要设置的userDetailsService
@@ -53,7 +53,7 @@ token的内部是不是还潜藏着我们需要的信息？
 - getContext()、getAuthentication()、getPrincipal()
 
 ``` java
-/ **
+ /**
   * 获取当前的<code> SecurityContext </ code>。
   *
   * @返回安全上下文（从不<null> null </ code>）
@@ -62,7 +62,7 @@ token的内部是不是还潜藏着我们需要的信息？
      return strategy.getContext();
   }
   
-/ **
+ /**
   * 获取当前已认证的主体或认证请求令牌。
   *
   * @如果没有身份验证，则返回<code> Authentication </ code>或<code> null </ code>
@@ -82,7 +82,7 @@ token的内部是不是还潜藏着我们需要的信息？
    *
    * @返回被验证的<code> Principal </ code>或已验证的<code> Principal </ code>
    * 身份验证后的主体。
-	 */
+   */
    Object getPrincipal();
 ```
 
