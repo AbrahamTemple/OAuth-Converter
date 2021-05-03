@@ -8,9 +8,7 @@
 
 从之前的经验我们可得知每个不同的client_id其授权得到的token都是不同的
 
-也就是说这个问题的前提是必须绑定每个用户使用的client_id都不一样
-
-通过这个client_id再去查询对应的用户
+也就是说这个问题的前提是必须绑定每个用户使用的client_id都不一样，通过这个client_id再去查询对应的用户
 
 然后我们可以通过DefaultAccessTokenConverter来解决这个问题
 
