@@ -12,7 +12,7 @@
 
 通过这个client_id再去查询对应的用户
 
-然后我们再来解决这个问题
+然后我们可以通过DefaultAccessTokenConverter来解决这个问题
 
 ## 原理图
 
