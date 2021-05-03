@@ -27,14 +27,14 @@ token的内部是不是还潜藏着我们需要的信息？
 - DefaultAccessTokenConverter
 
 ``` java
-  / **
-    * 转换器中代表用户的令牌中的部分数据。
-    *
-    * @param userTokenConverter要设置的userTokenConverter
-    * /
-	public void setUserTokenConverter(UserAuthenticationConverter userTokenConverter) {
-		this.userTokenConverter = userTokenConverter;
-	}
+/ **
+  * 转换器中代表用户的令牌中的部分数据。
+  *
+  * @param userTokenConverter要设置的userTokenConverter
+  * /
+  public void setUserTokenConverter(UserAuthenticationConverter userTokenConverter) {
+     this.userTokenConverter = userTokenConverter;
+  }
 ```
 
 - DefaultUserAuthenticationConverter
@@ -45,33 +45,33 @@ token的内部是不是还潜藏着我们需要的信息？
   *
   * @param userDetailsService要设置的userDetailsService
   * /
-	public void setUserDetailsService(UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
-	}
+  public void setUserDetailsService(UserDetailsService userDetailsService) {
+     this.userDetailsService = userDetailsService;
+  }
 ```
 
 - getContext()、getAuthentication()、getPrincipal()
 
 ``` java
-  / **
-    * 获取当前的<code> SecurityContext </ code>。
-    *
-    * @返回安全上下文（从不<null> null </ code>）
-    * /
-	public static SecurityContext getContext() {
-		return strategy.getContext();
-	}
+/ **
+  * 获取当前的<code> SecurityContext </ code>。
+  *
+  * @返回安全上下文（从不<null> null </ code>）
+  * /
+  public static SecurityContext getContext() {
+     return strategy.getContext();
+  }
   
-  / **
-    * 获取当前已认证的主体或认证请求令牌。
-    *
-    * @如果没有身份验证，则返回<code> Authentication </ code>或<code> null </ code>
-    * 信息可用
-    * /
-	Authentication getAuthentication();
+/ **
+  * 获取当前已认证的主体或认证请求令牌。
+  *
+  * @如果没有身份验证，则返回<code> Authentication </ code>或<code> null </ code>
+  * 信息可用
+  * /
+  Authentication getAuthentication();
   
   /**
-	 * 身份验证的主体的身份。在认证的情况下
+   * 身份验证的主体的身份。在认证的情况下
    * 使用用户名和密码进行请求，这将是用户名。来电者是
    * 预期将填充身份验证请求的主体。
    * <p>
@@ -83,7 +83,7 @@ token的内部是不是还潜藏着我们需要的信息？
    * @返回被验证的<code> Principal </ code>或已验证的<code> Principal </ code>
    * 身份验证后的主体。
 	 */
-	Object getPrincipal();
+   Object getPrincipal();
 ```
 
 ## 核心代码
