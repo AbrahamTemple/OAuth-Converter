@@ -31,7 +31,7 @@ token的内部是不是还潜藏着我们需要的信息？
   * 转换器中代表用户的令牌中的部分数据。
   *
   * @param userTokenConverter要设置的userTokenConverter
-  * /
+  */
   public void setUserTokenConverter(UserAuthenticationConverter userTokenConverter) {
      this.userTokenConverter = userTokenConverter;
   }
@@ -44,7 +44,7 @@ token的内部是不是还潜藏着我们需要的信息？
   * 从传入映射中提取{@link Authentication}时使用的可选{@link UserDetailsService}。
   *
   * @param userDetailsService要设置的userDetailsService
-  * /
+  */
   public void setUserDetailsService(UserDetailsService userDetailsService) {
      this.userDetailsService = userDetailsService;
   }
@@ -57,7 +57,7 @@ token的内部是不是还潜藏着我们需要的信息？
   * 获取当前的<code> SecurityContext </ code>。
   *
   * @返回安全上下文（从不<null> null </ code>）
-  * /
+  */
   public static SecurityContext getContext() {
      return strategy.getContext();
   }
@@ -67,7 +67,7 @@ token的内部是不是还潜藏着我们需要的信息？
   *
   * @如果没有身份验证，则返回<code> Authentication </ code>或<code> null </ code>
   * 信息可用
-  * /
+  */
   Authentication getAuthentication();
   
   /**
