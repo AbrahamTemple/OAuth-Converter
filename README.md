@@ -1,5 +1,17 @@
 # 使用转换器从token中获取对应的client信息
 
+## 原请求
+
+``` base
+http://124.71.185.137:8077/oauth/token?client_id=cli&client_secret=sec&scopes=app&grant_type=client_credentials
+```
+
+> Basic Auth --- Username: cli & Password: sec
+
+``` bash
+http://124.71.185.137:8077/oauth/token?grant_type=client_credentials&scopes=app
+```
+
 ## 需求
 
 当我们已经知道如何通过token对资源服务器进行访问时，会陷入一个疑惑
